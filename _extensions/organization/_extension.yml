@@ -1,0 +1,12 @@
+title: "Data Management Primer"
+author: "Michael Schramm"
+institute: "TWRI"
+version: 1.0.0
+contributes:
+  formats:
+    revealjs:
+      filters: [copy-resources.lua] # This is so resources get copied
+      theme: [default, theme.scss]
+      format-resources:
+        - logo-white.png
+        - background.jpg
