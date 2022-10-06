@@ -10,8 +10,8 @@ end
 
 function Header(el)
 
-  copyResource('logo.png')
-  copyResource('space.jpg')
+  copyResource('logo-white.png')
+  copyResource('background.jpg')
 
   return el
 

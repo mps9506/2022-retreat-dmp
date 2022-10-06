@@ -35,8 +35,7 @@ options(tidyverse.quiet=TRUE)
 
 ## Why do we plan for data management?
 
-::: {.incremental}
-
+::: incremental
 -   Sponsor Requirements
 
 -   Publication Requirements
@@ -44,7 +43,6 @@ options(tidyverse.quiet=TRUE)
 -   Project Continuity
 
 -   Facilitate Collaboration
-
 :::
 
 # What is data?
@@ -59,62 +57,49 @@ options(tidyverse.quiet=TRUE)
 
 # How do we manage data?
 
-::: {.incremental}
-
+::: incremental
 -   Try to retain raw data in non-proprietary formats
-  -   😀 good formats :
-      -   text files - `.txt`, `.csv`, `.xml`, `.ascii`, `.html`, etc.
-      -   containers - `.tar`, `.gzip`, `.zip`
-      -   geospatial - `.shp`, `.tiff`, `.gpk`, `.cdf`, etc.
-      -   images - `.tiff`, `.png`, `.bmp`, and other lossless formats.
-      -   databases - `xml` and `csv` for simple databases, MySQL and PostgreSQL for relational dbs.
-      -   lots of others available depending on project needs
-  -   Library of Congress maintains information about the sustainability of various digital formats: https://www.loc.gov/preservation/digital/formats/
-
+-   😀 good formats :
+    -   text files - `.txt`, `.csv`, `.xml`, `.ascii`, `.html`, etc.
+    -   containers - `.tar`, `.gzip`, `.zip`
+    -   geospatial - `.shp`, `.tiff`, `.gpk`, `.cdf`, etc.
+    -   images - `.tiff`, `.png`, `.bmp`, and other lossless formats.
+    -   databases - `xml` and `csv` for simple databases, MySQL and PostgreSQL for relational dbs.
+    -   lots of others available depending on project needs
+-   Library of Congress maintains information about the sustainability of various digital formats: https://www.loc.gov/preservation/digital/formats/
 :::
-
-
-
-
-
 
 # How do we manage data?
 
-::: {.incremental}
-
+::: incremental
 -   🤨 meh formats:
     -   text files - various MS office files. Be aware that Excel is notorious for auto-formatting data resulting in data transformation or loss.
     -   geospatial - `.gdb` proprietary spatial database package for ESRI. Standard in the industry but inaccessible to QGIS, R, Python, etc.
 -   😬 generally not suitable for long-term storage or sharing:
     -   Completely proprietary formats -`.rds`, `.rdata`, `.sas7bdat`
-        
 :::
-
-
 
 # Don't manipulate raw data
 
-- Once raw data is altered, you may or may not be able to restore it.
+-   Once raw data is altered, you may or may not be able to restore it.
 
-- Read/copy data into to an analysis spreadsheet, script, etc.
-
+-   Read/copy data into to an analysis spreadsheet, script, etc.
 
 # Metadata
 
-- Data about your data.
+-   Data about your data.
 
-- Can be manually created.
+-   Can be manually created.
 
-- Several tools available to create metadata that meets ISO standards and federal guidelines.
-
-# Sync/backup
-
-- Backup and syncing snapshots the current state of your data and stores it somewhere else.
-
-- Allows restoration of prior versions of your data.
+-   Several tools available to create metadata that meets ISO standards and federal guidelines.
 
 # Sync/backup
 
+-   Backup and syncing snapshots the current state of your data and stores it somewhere else.
+
+-   Allows restoration of prior versions of your data.
+
+# Sync/backup
 
 ```{r}
 #| echo: false
@@ -130,29 +115,26 @@ data.frame("Method" = c("Local Backup", "OneDrive/Teams", "Distributed <br /> Ve
   
 ```
 
-
 # Sharing
 
 **Sharing** means making the current state of your data available to others (internal or external to the Institute). Why is this needed?
 
-- Collaboration on a data analysis, writing, etc.
+-   Collaboration on a data analysis, writing, etc.
 
-- Publication or delivery of datasets
-
+-   Publication or delivery of datasets
 
 # Sharing
 
 Sharing for collaboration:
 
- - Distributed version control is difficult but standard for code projects.
- - OneDrive/Google Sheets and other cloud services make sharing easy.
- 
+-   Distributed version control is difficult but standard for code projects.
+-   OneDrive/Google Sheets and other cloud services make sharing easy.
+
 # Sharing
 
 Sharing for publication:
 
-  - Long-term archiving available through numerous data repository services.
-  - Examples: [Texas Data Repository](https://dataverse.tdl.org/), [CUAHSI Hydroshare](https://www.hydroshare.org/), [figshare](https://figshare.com/)
-  - [re3Data](https://www.re3data.org/) provides a comprehensive list and information on data repositories.
-  - TAMU librarians are good resource to select appropriate repositories.
-
+-   Long-term archiving available through numerous data repository services.
+-   Examples: [Texas Data Repository](https://dataverse.tdl.org/), [CUAHSI Hydroshare](https://www.hydroshare.org/), [figshare](https://figshare.com/)
+-   [re3Data](https://www.re3data.org/) provides a comprehensive list and information on data repositories.
+-   TAMU librarians are good resource to select appropriate repositories.

@@ -1,2 +1,4 @@
 project:
   title: "Data-Management-Presentation"
+  type: website
+  output-dir: docs
