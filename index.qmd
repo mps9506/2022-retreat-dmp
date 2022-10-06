@@ -2,10 +2,10 @@
 title: "Data Management"
 author: "Michael Schramm"
 institute: "Texas Water Resources Institute"
-date: today
+date: "2022-10-11"
 title-slide-attributes: # this is if you want a background image on the title screen. Use the right path to the image you want
   data-background-image: "background.jpg"
-  data-background-opacity: "0.5"
+  data-background-opacity: "0.75"
 format:
   organization-revealjs:
     echo: true
@@ -21,7 +21,7 @@ format:
 
 -   Be respectful
 
--   Disclaimer - I bring a data science perspective and bias
+-   Disclaimer - This is a data science perspective and focused on project/research data.
 
 ```{r}
 #| echo: false
@@ -29,11 +29,22 @@ options(tidyverse.quiet=TRUE)
 
 ```
 
-## Why do we plan for data management? {background-image="background.jpg" background-opacity="0.5"}
+
+# What is data management?
+::: incremental
+-   the process of providing the appropriate labeling, storage, and access for data at all stages of a research project (https://datamanagement.hms.harvard.edu/about/what-research-data-management)
+:::
+
+# Why data management?
+
+{{< video https://www.youtube.com/embed/66oNv_DJuPc width="1200" height="800">}}
+
+
+## Why data management? {background-image="background.jpg" background-opacity="0.25"}
 
 [![\[xkcd.com\](https://xkcd.com/1683/)](xkcd/digital_data.png){fig-alt="digital data"}](https://xkcd.com/1683/)
 
-## Why do we plan for data management?
+## Why data management?
 
 ::: incremental
 -   Sponsor Requirements
@@ -45,7 +56,7 @@ options(tidyverse.quiet=TRUE)
 -   Facilitate Collaboration
 :::
 
-# What is data?
+
 
 # How do we manage data?
 
@@ -87,11 +98,14 @@ options(tidyverse.quiet=TRUE)
 
 # Metadata
 
--   Data about your data.
-
--   Can be manually created.
+::: incremental
+-   Data about your data (Variable names, units, how the data was collected, model derived or measured, etc.).
 
 -   Several tools available to create metadata that meets ISO standards and federal guidelines.
+    - [{dataspice}](https://docs.ropensci.org/dataspice/) R package for creating schema.org compliant metadata.
+    - [Metadata Wizard by USGS](https://github.com/usgs/fort-pymdwizard) for metadata that complies with FGDC spatial and non-spatial metadata requirements
+    - [EPA Metadata Editor](https://www.epa.gov/geospatial/epa-metadata-editor) for ArcGIS
+:::
 
 # Sync/backup
 
@@ -109,7 +123,7 @@ data.frame("Method" = c("Local Backup", "OneDrive/Teams", "Distributed <br /> Ve
                     "Collaboration" = c("❌","✅","✅"),
                     "Notes" = c("- Automated backup require additional setup/software <br />- No file versioning",
                                 "- Fully automated<br />- Limited file versioning",
-                                "- Strong file versioning <br />- High difficulty to implement"
+                                "- Strong file versioning <br />- Difficult to learn"
                                 )) |> 
   kableExtra::kbl(escape = FALSE)
   
@@ -138,3 +152,6 @@ Sharing for publication:
 -   Examples: [Texas Data Repository](https://dataverse.tdl.org/), [CUAHSI Hydroshare](https://www.hydroshare.org/), [figshare](https://figshare.com/)
 -   [re3Data](https://www.re3data.org/) provides a comprehensive list and information on data repositories.
 -   TAMU librarians are good resource to select appropriate repositories.
+
+
+# Thanks!

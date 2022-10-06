@@ -7,10 +7,11 @@
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.1.189">
+  <meta name="generator" content="quarto-1.2.190">
 
   <meta name="author" content="Michael Schramm">
-  <title>Data Management</title>
+  <meta name="dcterms.date" content="2022-10-11">
+  <title>Data-Management-Presentation - Data Management</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -326,30 +327,53 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="background.jpg" data-background-opacity="0.5" class="center">
+<section id="title-slide" data-background-image="background.jpg" data-background-opacity="0.75" class="quarto-title-block center">
   <h1 class="title">Data Management</h1>
-  <p class="author">Michael Schramm</p>
-  <p class="institute">Texas Water Resources Institute</p>
-  <p class="date">10/6/22</p>
-</section>
 
-<section>
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Michael Schramm 
+</div>
+        <p class="quarto-title-affiliation">
+            Texas Water Resources Institute
+          </p>
+    </div>
+</div>
+
+  <p class="date">10/11/22</p>
+</section>
 <section id="intro" class="title-slide slide level1 center">
 <h1>Intro</h1>
 <ul>
 <li><p>Be respectful</p></li>
-<li><p>Disclaimer - I bring a data science perspective and bias</p></li>
+<li><p>Disclaimer - This is a data science perspective and focused on project/research data.</p></li>
 </ul>
 <div class="cell">
 
 </div>
 </section>
-<section id="why-do-we-plan-for-data-management" class="slide level2" data-background-image="background.jpg" data-background-opacity="0.5">
-<h2>Why do we plan for data management?</h2>
+
+<section id="what-is-data-management" class="title-slide slide level1 center">
+<h1>What is data management?</h1>
+<div>
+<ul>
+<li class="fragment">the process of providing the appropriate labeling, storage, and access for data at all stages of a research project (https://datamanagement.hms.harvard.edu/about/what-research-data-management)</li>
+</ul>
+</div>
+</section>
+
+<section>
+<section id="why-data-management" class="title-slide slide level1 center">
+<h1>Why data management?</h1>
+<iframe src="https://www.youtube.com/embed/66oNv_DJuPc" width="1200" height="800" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</section>
+<section id="why-data-management-1" class="slide level2" data-background-image="background.jpg" data-background-opacity="0.25">
+<h2>Why data management?</h2>
 
 <img data-src="xkcd/digital_data.png" alt="digital data" class="r-stretch quarto-figure-center"><p class="caption">[xkcd.com](https://xkcd.com/1683/)</p></section>
-<section id="why-do-we-plan-for-data-management-1" class="slide level2">
-<h2>Why do we plan for data management?</h2>
+<section id="why-data-management-2" class="slide level2">
+<h2>Why data management?</h2>
 <div>
 <ul>
 <li class="fragment"><p>Sponsor Requirements</p></li>
@@ -359,11 +383,6 @@
 </ul>
 </div>
 </section></section>
-<section id="what-is-data" class="title-slide slide level1 center">
-<h1>What is data?</h1>
-
-</section>
-
 <section id="how-do-we-manage-data" class="title-slide slide level1 center">
 <h1>How do we manage data?</h1>
 <ul>
@@ -419,11 +438,17 @@
 
 <section id="metadata" class="title-slide slide level1 center">
 <h1>Metadata</h1>
+<div>
 <ul>
-<li><p>Data about your data.</p></li>
-<li><p>Can be manually created.</p></li>
-<li><p>Several tools available to create metadata that meets ISO standards and federal guidelines.</p></li>
+<li class="fragment"><p>Data about your data (Variable names, units, how the data was collected, model derived or measured, etc.).</p></li>
+<li class="fragment"><p>Several tools available to create metadata that meets ISO standards and federal guidelines.</p>
+<ul>
+<li class="fragment"><a href="https://docs.ropensci.org/dataspice/">{dataspice}</a> R package for creating schema.org compliant metadata.</li>
+<li class="fragment"><a href="https://github.com/usgs/fort-pymdwizard">Metadata Wizard by USGS</a> for metadata that complies with FGDC spatial and non-spatial metadata requirements</li>
+<li class="fragment"><a href="https://www.epa.gov/geospatial/epa-metadata-editor">EPA Metadata Editor</a> for ArcGIS</li>
+</ul></li>
 </ul>
+</div>
 </section>
 
 <section id="syncbackup" class="title-slide slide level1 center">
@@ -469,7 +494,7 @@
    <td style="text-align:left;"> ❌ </td>
    <td style="text-align:left;"> ✅ </td>
    <td style="text-align:left;"> ✅ </td>
-   <td style="text-align:left;"> - Strong file versioning <br>- High difficulty to implement </td>
+   <td style="text-align:left;"> - Strong file versioning <br>- Difficult to learn </td>
   </tr>
 </tbody>
 </table>
@@ -505,6 +530,10 @@
 <li><a href="https://www.re3data.org/">re3Data</a> provides a comprehensive list and information on data repositories.</li>
 <li>TAMU librarians are good resource to select appropriate repositories.</li>
 </ul>
+</section>
+
+<section id="thanks" class="title-slide slide level1 center">
+<h1>Thanks!</h1>
 
 
 <img src="logo-white.png" class="slide-logo r-stretch"><div class="footer footer-default">
@@ -802,7 +831,24 @@
         button.classList.add('code-copy-button-checked');
         var currentTitle = button.getAttribute("title");
         button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
         setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
           button.setAttribute("title", currentTitle);
           button.classList.remove('code-copy-button-checked');
         }, 1000);
@@ -840,24 +886,42 @@
           return note.innerHTML;
         });
       }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
       var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
       for (var i=0; i<bibliorefs.length; i++) {
         const ref = bibliorefs[i];
-        const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-        tippyHover(ref, function() {
-          var popup = window.document.createElement('div');
-          cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
-            }
-            popup.appendChild(citeDiv);
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
           });
-          return popup.innerHTML;
-        });
+        }
       }
     });
     </script>
