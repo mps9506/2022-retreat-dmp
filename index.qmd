@@ -17,11 +17,8 @@ format:
     footer: "[Texas Water Resources Institute](https://twri.tamu.edu/)"
 ---
 
-# Intro
 
--   Be respectful
-
--   Disclaimer - This is a data science perspective and focused on project/research data.
+# What is data management?
 
 ```{r}
 #| echo: false
@@ -29,8 +26,6 @@ options(tidyverse.quiet=TRUE)
 
 ```
 
-
-# What is data management?
 ::: incremental
 -   the process of providing the appropriate labeling, storage, and access for data at all stages of a research project (https://datamanagement.hms.harvard.edu/about/what-research-data-management)
 :::
